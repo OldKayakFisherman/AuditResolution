@@ -1,5 +1,6 @@
 ﻿using AuditResolution.Infrastructure.Configuration;
 using AuditResolution.Infrastructure.Import.Parsers;
+using Microsoft.Extensions.Http;
 
 namespace AuditResolution.ReportDashboard.Configuration
 {
@@ -15,8 +16,8 @@ namespace AuditResolution.ReportDashboard.Configuration
 
         private static void ConfigureParsers(this WebApplicationBuilder builder)
         {
-            builder.AddHttpClient();
-            services.AddTransient<DbKeyParser>();
+            builder.Services.AddHttpClient();
+            builder.Services.AddTransient<DbKeyParser>();
         }
 
         private static void ConfigureSettings(this WebApplicationBuilder builder)
