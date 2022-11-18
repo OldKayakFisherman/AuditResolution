@@ -11,13 +11,15 @@ namespace AuditResolution.ReportDashboard.Configuration
             builder.Services.ConfigureDataRepositories();
             builder.Services.ConfigureUtilities();
             builder.Services.ConfigureLocalServices();
+            builder.Services.ConfigureParsers();
             builder.ConfigureSettings();
+            
         }
 
-        private static void ConfigureParsers(this WebApplicationBuilder builder)
+        private static void ConfigureParsers(this IServiceCollection services)
         {
-            builder.Services.AddHttpClient();
-            builder.Services.AddTransient<DbKeyParser>();
+            services.AddHttpClient();
+            services.AddTransient<DbKeyParser>();
         }
 
         private static void ConfigureSettings(this WebApplicationBuilder builder)
