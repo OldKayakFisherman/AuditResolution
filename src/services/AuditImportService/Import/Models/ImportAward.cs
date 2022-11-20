@@ -8,7 +8,7 @@ public class ImportAward
         public string CFDASequenceNumber { get; set; }
 
         [JsonProperty("FEDERALPROGRAMNAME")]
-        public string FederalprogramName { get; set; }
+        public string FederalProgramName { get; set; }
 
         [JsonProperty("AMOUNT")]
         public long Amount { get; set; }
@@ -20,7 +20,7 @@ public class ImportAward
         public string TypeRequirement { get; set; }
 
         [JsonProperty("FINDINGREFNUMS")]
-        public string Findingrefnums { get; set; }
+        public string FindingRefNums { get; set; }
 
         [JsonProperty("RD")]
         public string RD { get; set; }
@@ -35,7 +35,7 @@ public class ImportAward
         public string CFDAExt { get; set; }
 
         [JsonProperty("TYPEREPORT_MP")]
-        public string TypereportMP { get; set; }
+        public string TypeReportMP { get; set; }
 
         [JsonProperty("ARRA")]
         public string ARRA { get; set; }

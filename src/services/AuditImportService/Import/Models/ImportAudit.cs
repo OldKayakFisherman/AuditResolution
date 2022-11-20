@@ -23,10 +23,10 @@ namespace AuditImportService.Import.Models
         public short? Numbermonths { get; set; }
 
         [JsonProperty("MULTIPLEEINS")]
-        public string Multipleeins { get; set; }
+        public string MultipleEins { get; set; }
 
         [JsonProperty("EIN")]
-        public string Ein { get; set; }
+        public string EIN { get; set; }
 
         [JsonProperty("AUDITEENAME")]
         public string Auditeename { get; set; }
@@ -44,142 +44,142 @@ namespace AuditImportService.Import.Models
         public string Zipcode { get; set; }
 
         [JsonProperty("AUDITEECONTACT")]
-        public string Auditeecontact { get; set; }
+        public string AuditeeContact { get; set; }
 
         [JsonProperty("AUDITEETITLE")]
-        public string Auditeetitle { get; set; }
+        public string AuditeeTitle { get; set; }
 
         [JsonProperty("AUDITEEPHONE")]
-        public string Auditeephone { get; set; }
+        public string AuditeePhone { get; set; }
 
         [JsonProperty("AUDITEEFAX")]
-        public string Auditeefax { get; set; }
+        public string AuditeeFax { get; set; }
 
         [JsonProperty("AUDITEEEMAIL")]
-        public string Auditeeemail { get; set; }
+        public string AuditeeEmail { get; set; }
 
         [JsonProperty("CPAFIRMNAME")]
-        public string Cpafirmname { get; set; }
+        public string CPAfirmname { get; set; }
 
         [JsonProperty("CPASTREET1")]
-        public string Cpastreet1 { get; set; }
+        public string CPAStreet1 { get; set; }
 
         [JsonProperty("CPACITY")]
-        public string Cpacity { get; set; }
+        public string CPACity { get; set; }
 
         [JsonProperty("CPASTATE")]
-        public string Cpastate { get; set; }
+        public string CPAState { get; set; }
 
         [JsonProperty("CPAZIPCODE")]
-        public string Cpazipcode { get; set; }
+        public string CPAZipcode { get; set; }
 
         [JsonProperty("CPACONTACT")]
-        public string Cpacontact { get; set; }
+        public string CPAContact { get; set; }
 
         [JsonProperty("CPATITLE")]
-        public string Cpatitle { get; set; }
+        public string CPATitle { get; set; }
 
         [JsonProperty("CPAPHONE")]
-        public string Cpaphone { get; set; }
+        public string CPAPhone { get; set; }
 
         [JsonProperty("CPAFAX")]
-        public string Cpafax { get; set; }
+        public string CPAFax { get; set; }
 
         [JsonProperty("CPAEMAIL")]
-        public string Cpaemail { get; set; }
+        public string CPAEmail { get; set; }
 
         [JsonProperty("CPADATESIGNED")]
-        public DateTimeOffset Cpadatesigned { get; set; }
+        public DateTimeOffset CPADateSigned { get; set; }
 
         [JsonProperty("COG_OVER")]
-        public string CogOver { get; set; }
+        public string COGOver { get; set; }
 
         [JsonProperty("COGAGENCY")]
-        public string Cogagency { get; set; }
+        public string COGAgency { get; set; }
 
         [JsonProperty("COG_AGENCY")]
-        public string CogAgency { get; set; }
+        public string COGAgency2 { get; set; }
 
         [JsonProperty("OVERSIGHTAGENCY")]
-        public string Oversightagency { get; set; }
+        public string OversightAgency { get; set; }
 
         [JsonProperty("TYPEREPORT_FS")]
-        public string TypereportFs { get; set; }
+        public string TypeReportFS { get; set; }
 
         [JsonProperty("MATERIALNONCOMPLIANCE")]
-        public string Materialnoncompliance { get; set; }
+        public string MaterialNonCompliance { get; set; }
 
         [JsonProperty("GOINGCONCERN")]
-        public string Goingconcern { get; set; }
+        public string GoingConcern { get; set; }
 
         [JsonProperty("TYPEREPORT_MP")]
-        public string TypereportMp { get; set; }
+        public string TypeReportMP { get; set; }
 
         [JsonProperty("DOLLARTHRESHOLD")]
-        public long Dollarthreshold { get; set; }
+        public long DollarThreshold { get; set; }
 
         [JsonProperty("LOWRISK")]
-        public string Lowrisk { get; set; }
+        public string LowRisk { get; set; }
 
         [JsonProperty("TOTFEDEXPEND")]
-        public long Totfedexpend { get; set; }
+        public long TotalFederalExpendature { get; set; }
 
         [JsonProperty("QCOSTS")]
-        public string Qcosts { get; set; }
+        public string QCosts { get; set; }
 
         [JsonProperty("CYFINDINGS")]
-        public string Cyfindings { get; set; }
+        public string CyFindings { get; set; }
 
         [JsonProperty("PYSCHEDULE")]
-        public string Pyschedule { get; set; }
+        public string PySchedule { get; set; }
 
         [JsonProperty("DUP_REPORTS")]
         public string DupReports { get; set; }
 
         [JsonProperty("MULTIPLEDUNS")]
-        public string Multipleduns { get; set; }
+        public string MultipleDuns { get; set; }
 
         [JsonProperty("DUNS")]
-        public string Duns { get; set; }
+        public string DUNS { get; set; }
 
         [JsonProperty("AUDITEECERTIFYNAME")]
-        public string Auditeecertifyname { get; set; }
+        public string AuditeeCertifyName { get; set; }
 
         [JsonProperty("AUDITEECERTIFYTITLE")]
-        public string Auditeecertifytitle { get; set; }
+        public string AuditeeCertifyTitle { get; set; }
 
         [JsonProperty("SIGNIFICANTDEFICIENCY")]
-        public string Significantdeficiency { get; set; }
+        public string SignificantDeficiency { get; set; }
 
         [JsonProperty("SD_MATERIALWEAKNESS")] 
-        public string SdMaterialweakness { get; set; }
+        public string SDMaterialWeakness { get; set; }
 
         [JsonProperty("SIGNIFICANTDEFICIENCY_MP")] 
-        public string SignificantdeficiencyMp { get; set; }
+        public string SignificantDeficiencyMP { get; set; }
 
         [JsonProperty("SD_MATERIALWEAKNESS_MP")] 
-        public string SdMaterialweaknessMp { get; set; }
+        public string SDMaterialWeaknessMP { get; set; }
 
         [JsonProperty("SP_FRAMEWORK")] 
-        public string SpFramework { get; set; }
+        public string SPFramework { get; set; }
 
         [JsonProperty("SP_FRAMEWORK_REQUIRED")] 
-        public string SpFrameworkRequired { get; set; }
+        public string SPFrameworkRequired { get; set; }
 
         [JsonProperty("TYPEREPORT_SP_FRAMEWORK")] 
-        public string TypereportSpFramework { get; set; }
+        public string TypeReportSPFramework { get; set; }
 
         [JsonProperty("AUDITEE_SUBMIT")] 
         public string AuditeeSubmit { get; set; }
 
         [JsonProperty("MULTIPLE_CPAS")] 
-        public string MultipleCpas { get; set; }
+        public string MultipleCPAs { get; set; }
 
         [JsonProperty("AUDITOR_EIN")] 
-        public string AuditorEin { get; set; }
+        public string AuditorEIN { get; set; }
 
         [JsonProperty("TYPEOFENTITY")] 
-        public string Typeofentity { get; set; }
+        public string TypeOfEntity { get; set; }
 
         [JsonProperty("SUPPRESSION_CODE")] 
         public string SuppressionCode { get; set; }
@@ -188,13 +188,13 @@ namespace AuditImportService.Import.Models
         public string EntityType { get; set; }
 
         [JsonProperty("CPAFOREIGN")] 
-        public string Cpaforeign { get; set; }
+        public string CPAForeign { get; set; }
 
         [JsonProperty("UEI")] 
-        public string Uei { get; set; }
+        public string UEI { get; set; }
 
         [JsonProperty("MULTIPLEUEIS")] 
-        public string Multipleueis { get; set; }
+        public string MultipleUEIs { get; set; }
 
        
 
