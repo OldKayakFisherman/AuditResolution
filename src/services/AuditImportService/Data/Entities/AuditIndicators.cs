@@ -13,46 +13,43 @@ public class AuditIndicators
     public string? TypeReportFinancialStatements { get; set; }
 
     [Column("MATERIALNONCOMPLIANCE")]
-    public string? MaterialNonCompliance { get; set; }
+    public bool MaterialNonCompliance { get; set; }
 
     [Column("GOINGCONCERN")]
-    public string? GoingConcern { get; set; }
+    public bool GoingConcern { get; set; }
 
     [Column("TYPEREPORT_MP")]
     public string? TypeReportMajorProgram { get; set; }
     
     [Column("LOWRISK")]
-    public string? LowRisk { get; set; }
+    public bool LowRisk { get; set; }
     
     [Column("QCOSTS")]
-    public string? QCosts { get; set; }
-
-    [Column("CYFINDINGS")]
-    public string? CurrentYearFindings { get; set; }
-
+    public bool QCosts { get; set; }
+    
     [Column("PYSCHEDULE")]
-    public string? PriorYearSchedule { get; set; }
+    public bool PriorYearSchedule { get; set; }
 
     [Column("DUP_REPORTS")]
-    public string? DuplicateReports { get; set; }
+    public bool DuplicateReports { get; set; }
 
     [Column("SIGNIFICANTDEFICIENCY")]
-    public string? SignificantDeficiency { get; set; }
+    public bool SignificantDeficiency { get; set; }
 
     [Column("SD_MATERIALWEAKNESS")] 
-    public string? SignificantDeficiencyMaterialWeakness { get; set; }
+    public bool SignificantDeficiencyMaterialWeakness { get; set; }
 
     [Column("SIGNIFICANTDEFICIENCY_MP")] 
-    public string? SignificantDeficiencyMajorProgram { get; set; }
+    public bool SignificantDeficiencyMajorProgram { get; set; }
 
     [Column("SD_MATERIALWEAKNESS_MP")] 
-    public string? SignificantDeficiencyMaterialWeaknessMajorProgram { get; set; }
+    public bool SignificantDeficiencyMaterialWeaknessMajorProgram { get; set; }
 
     [Column("SP_FRAMEWORK")] 
     public string? SpecialFramework { get; set; }
 
     [Column("SP_FRAMEWORK_REQUIRED")] 
-    public string? SpecialFrameworkFrameworkRequired { get; set; }
+    public bool SpecialFrameworkFrameworkRequired { get; set; }
 
     [Column("TYPEREPORT_SP_FRAMEWORK")] 
     public string? TypeReportSpecialFramework { get; set; }

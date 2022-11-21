@@ -38,8 +38,7 @@ public class AuditPackage
 
     [Column("AUDITEECERTIFYTITLE")]
     public string? AuditeeCertifyTitle { get; set; }
-
-
+    
     [Column("COG")]
     public string? COG { get; set; }
     
@@ -66,4 +65,7 @@ public class AuditPackage
     public CPA? CPA { get; set; }
     public AuditTimeframe? AuditTimeframe { get; set; }
     public AuditIndicators? AuditIndicators { get; set; }
+
+    public IList<Award>? Awards { get; set; }
+
 }

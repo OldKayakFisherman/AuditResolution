@@ -12,8 +12,8 @@ public class Auditee
     [Column("EIN")] 
     public string? EIN { get; set; }
     
-    [Column("NAME")]
-    public string? Name { get; set; }
+    [Required, Column("NAME")]
+    public string Name { get; set; }
 
     [Column("STREET1")]
     public string? Street1 { get; set; }

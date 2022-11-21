@@ -50,10 +50,10 @@ public class ImportAward
         public int FindingsCount { get; set; }
         
         [JsonProperty("LOANBALANCE")]
-        public long LoanBalance { get; set; }
+        public long? LoanBalance { get; set; }
 
         [JsonProperty("PASSTHROUGHAMOUNT")]
-        public long PassthroughAmount { get; set; }
+        public long? PassthroughAmount { get; set; }
 
         [JsonProperty("AWARDIDENTIFICATION")]
         public string? AwardIdentification { get; set; }
@@ -68,10 +68,10 @@ public class ImportAward
         public string? StateClustername { get; set; }
 
         [JsonProperty("PROGRAMTOTAL")]
-        public long ProgramTotal { get; set; }
+        public long? ProgramTotal { get; set; }
 
         [JsonProperty("CLUSTERTOTAL")]
-        public long ClusterTotal { get; set; }
+        public long? ClusterTotal { get; set; }
 
         [JsonProperty("OTHERCLUSTERNAME")]
         public string? OtherClusterName { get; set; }
