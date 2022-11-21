@@ -1,4 +1,4 @@
-﻿using AuditResolution.Infrastructure.Import.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +22,11 @@ namespace AuditResolution.Infrastructure.Import.Parsers
             _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
+        /*
         public async Task<IList<ImportDbKey>?> ImportDbKeys(string sourceUrl, DateTime firewallDate)
         {
             //Construct the url
+            
             string targetUrl = $"{sourceUrl}?firewallDate={HttpUtility.HtmlEncode(firewallDate.ToShortDateString())}";
             var httpClient = _clientFactory.CreateClient();
             IList<ImportDbKey>? retval = null;
@@ -36,10 +38,11 @@ namespace AuditResolution.Infrastructure.Import.Parsers
 
                 retval = await JsonSerializer.DeserializeAsync<List<ImportDbKey>>(stream, _options);
             }
+            
 
-
-            return retval;
-           
+            //return retval;
+            return null;
         }
+        */
     }
 }

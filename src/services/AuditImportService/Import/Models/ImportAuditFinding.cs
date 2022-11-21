@@ -5,40 +5,40 @@ namespace AuditImportService.Import.Models;
 public class ImportAuditFinding
 {
     [JsonProperty("QCOSTS")]
-    public string QCosts {get;set;}
+    public string? QCosts {get;set;}
     
     [JsonProperty("OTHERFINDINGS")]
-    public string OtherFindings {get;set;}
+    public string? OtherFindings {get;set;}
     
     [JsonProperty("SIGNIFICANTDEFICIENCY")]
-    public string SignificantDeficiency {get;set;}
+    public string? SignificantDeficiency {get;set;}
     
     [JsonProperty("MATERIALWEAKNESS")]
-    public string MaterialWeakness {get;set;}
+    public string? MaterialWeakness {get;set;}
     
     [JsonProperty("OTHERNONCOMPLIANCE")]
-    public string OtherNonCompliance {get;set;}
+    public string? OtherNonCompliance {get;set;}
     
     [JsonProperty("TYPEREQUIREMENT")]
-    public string TypeRequirement {get;set;}
+    public string? TypeRequirement {get;set;}
     
     [JsonProperty("FINDINGREFNUMS")]
-    public string FindingRefNums {get;set;}
+    public string? FindingRefNums {get;set;}
     
     [JsonProperty("ELECAUDITSID")]
     public int ElecAuditsId { get; set; }
     
     [JsonProperty("MODIFIEDOPINION")]
-    public string ModifiedOpinion {get;set;}
+    public string? ModifiedOpinion {get;set;}
     
     [JsonProperty("ROWID")]
     public int? RowId { get; set; }
     
     [JsonProperty("REPEATFINDING")]
-    string RepeatFinding { get; set; }
+    public string? RepeatFinding { get; set; }
     
     [JsonProperty("PRIORFINDINGREFNUMS")] 
-    string PriorFindingRefNums { get; set; }
+    public string? PriorFindingRefNums { get; set; }
 
 
 }

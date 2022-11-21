@@ -14,17 +14,17 @@ public class ImportFACHistory
     public short Version { get; set; }
 
     [JsonProperty("AUDITEE_SUBMIT")]
-    public string AuditeeSubmit { get; set; }
+    public string? AuditeeSubmit { get; set; }
 
     [JsonProperty("AUDITEE_SUBMIT_DATE")]
     public DateTimeOffset AuditeeSubmitDate { get; set; }
 
     [JsonProperty("AUDITOR_SUBMIT")]
-    public string AuditorSubmit { get; set; }
+    public string? AuditorSubmit { get; set; }
 
     [JsonProperty("AUDITOR_SUBMIT_DATE")]
     public DateTimeOffset AuditorSubmitDate { get; set; }
 
     [JsonProperty("FAC_SUBMIT")]
-    public string FacSubmit { get; set; }
+    public string? FACSubmit { get; set; }
 }

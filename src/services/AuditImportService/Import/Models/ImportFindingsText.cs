@@ -17,13 +17,13 @@ public class ImportFindingsText
     public short Version { get; set; }
 
     [JsonProperty("FINDINGREFNUMS")] 
-    public string FindingRefNums { get; set; }
+    public string? FindingRefNums { get; set; }
 
     [JsonProperty("TEXT")] 
-    public string Text { get; set; }
+    public string? Text { get; set; }
 
     [JsonProperty("CHARTSTABLES")] 
-    public string ChartsTables { get; set; }
+    public string? ChartsTables { get; set; }
 
     [JsonProperty("ROWID")] 
     public int? RowId { get; set; }

@@ -9,8 +9,8 @@ namespace AuditResolution.Infrastructure.Configuration
     public class AppSettings
     {
         public DateTime? ImportStartDate { get; set; }
-        public string BaseDataFormUrl { get; set; }
-        public string BaseDataDBKeyUrl { get; set; }
-        public string BaseDataImageUrl { get; set; }
+        public string? BaseDataFormUrl { get; set; }
+        public string? BaseDataDBKeyUrl { get; set; }
+        public string? BaseDataImageUrl { get; set; }
     }
 }

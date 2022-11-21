@@ -8,10 +8,10 @@ public class ImportDUN
     public short SeqNum {get;set;}
   
     [JsonProperty("DUNS")]
-    public string DUNs {get;set;}
+    public string? DUNs {get;set;}
     
     [JsonProperty("MAIN_DUNS")]
-    public string MainDUNs {get;set;}
+    public string? MainDUNs {get;set;}
    
 
 }

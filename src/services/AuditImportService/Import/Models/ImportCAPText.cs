@@ -17,13 +17,13 @@ public class ImportCAPText
     public short Version { get; set; }
 
     [JsonProperty("FINDINGREFNUMS")] 
-    public string Findingrefnums { get; set; }
+    public string? Findingrefnums { get; set; }
 
     [JsonProperty("TEXT")] 
-    public string Text { get; set; }
+    public string? Text { get; set; }
 
     [JsonProperty("CHARTSTABLES")] 
-    public string Chartstables { get; set; }
+    public string? Chartstables { get; set; }
 
     [JsonProperty("ROWID")] 
     public int? RowId { get; set; }

@@ -8,8 +8,8 @@ public class ImportPassthrough
     public int ElecAuditsId { get; set; }
     
     [JsonProperty("PASSTHROUGHNAME")]
-    public string PassthroughName { get; set; }
+    public string? PassthroughName { get; set; }
     
     [JsonProperty("PASSTHROUGHID")]
-    public string PassthroughId { get; set; }
+    public string? PassthroughId { get; set; }
 }

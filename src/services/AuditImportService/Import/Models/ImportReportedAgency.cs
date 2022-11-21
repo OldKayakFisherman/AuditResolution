@@ -8,19 +8,19 @@ public class ImportReportedAgency
     public short Audityear { get; set; }
 
     [JsonProperty("AGENCYCFDA")]
-    public string Agencycfda { get; set; }
+    public string? Agencycfda { get; set; }
 
     [JsonProperty("PYAGENCY")]
-    public string PyAgency { get; set; }
+    public string? PyAgency { get; set; }
 
     [JsonProperty("PRIORFINDING")]
-    public string PriorFinding { get; set; }
+    public string? PriorFinding { get; set; }
 
     [JsonProperty("CURRENTFINDING")]
-    public string Currentfinding { get; set; }
+    public string? Currentfinding { get; set; }
 
     [JsonProperty("FINAL")]
-    public string Final { get; set; }
+    public string? Final { get; set; }
 
     [JsonProperty("VERSION")]
     public short Version { get; set; }

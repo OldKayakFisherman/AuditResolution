@@ -11,7 +11,7 @@ public class ImportNote
     public short AuditYear { get; set; }
 
     [JsonProperty("CONTENT")]
-    public string Content { get; set; }
+    public string? Content { get; set; }
 
     [JsonProperty("ID")]
     public int Id { get; set; }
@@ -23,7 +23,7 @@ public class ImportNote
     public short SeqNumber { get; set; }
 
     [JsonProperty("TITLE")]
-    public string Title { get; set; }
+    public string? Title { get; set; }
 
     [JsonProperty("TYPE_ID")]
     public int TypeId { get; set; }

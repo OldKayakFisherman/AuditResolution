@@ -5,10 +5,10 @@ namespace AuditImportService.Import.Models
     public class ImportAuditPackage
     {
         [JsonProperty("mainEin")]
-        public string MainEin { get; set; }
+        public string? MainEin { get; set; }
 
         [JsonProperty("header")]
-        public ImportAudit Audit { get; set; }
+        public ImportAudit? Audit { get; set; }
 
         [JsonProperty("agencyList")] 
         public IList<ImportAgency>? AgencyList { get; set; }
