@@ -68,6 +68,7 @@ public class AuditPackage
 
     public IList<Award>? Awards { get; set; }
     public IList<CAPText> CapTexts { get; set; }
-    
+    public IList<AddtionalEIN> AddtionalEINs { get; set; }
+
 
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AuditImportService.Data.Entities;
 
-[Table("AGENCIES")]
+[Table("FEDERAL_AGENCIES")]
 public class Agency
 {
     [Key, Column("ID")]

@@ -28,7 +28,7 @@ public class CPA
     public string? Contact { get; set; }
 
     [Column("TITLE")]
-    public string? itle { get; set; }
+    public string? Title { get; set; }
 
     [Column("PHONE")]
     public string? Phone { get; set; }
