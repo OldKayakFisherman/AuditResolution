@@ -67,5 +67,7 @@ public class AuditPackage
     public AuditIndicators? AuditIndicators { get; set; }
 
     public IList<Award>? Awards { get; set; }
+    public IList<CAPText> CapTexts { get; set; }
+    
 
 }

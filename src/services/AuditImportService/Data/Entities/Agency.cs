@@ -9,5 +9,16 @@ public class Agency
     [Key, Column("ID")]
     public int Id { get; set; }
     
+    [Column("CFDAPREFIX")]
+    public string? CFDAPrefix { get; set; }
+
+    [Column("NAME")]
+    public string? Name { get; set; }
+
+    [Column("STARTEXT")]
+    public string? StartExt { get; set; }
+
+    [Column("ENDEXT")]
+    public string? EndExt { get; set; }
    
 }
