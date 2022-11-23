@@ -68,7 +68,10 @@ public class AuditPackage
 
     public IList<Award>? Awards { get; set; }
     public IList<CAPText> CapTexts { get; set; }
-    public IList<AddtionalEIN> AddtionalEINs { get; set; }
-
+    public IList<CAPText> FindingTexts { get; set; }
+    public IList<AdditionalEIN> AddtionalEINs { get; set; }
+    public IList<AdditionalDUN> AddtionalDUNs { get; set; }
+    public IList<AdditionalUEI> AdditionalUEIs { get; set; }
+    public IList<Passthrough> Passthroughs { get; set; }
 
 }

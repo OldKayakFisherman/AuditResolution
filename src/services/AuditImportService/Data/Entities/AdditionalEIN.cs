@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AuditImportService.Data.Entities;
 
 [Table("ADDITIONAL_EINS")]
-public class AddtionalEIN
+public class AdditionalEIN
 {
     [Key, Column("ID")]
     public int Id { get; set; }
