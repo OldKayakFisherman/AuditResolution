@@ -1,10 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
 namespace AuditImportService.Import.Models;
 
 public class ImportReportedAgency
 {
-    [JsonProperty("AUDITYEAR")]
+    
+    [Key, Column("ID")]
+    public int Id { get; set; }
+    
+    [Column("AUDITYEAR")]
     public short Audityear { get; set; }
 
     [JsonProperty("AGENCYCFDA")]
