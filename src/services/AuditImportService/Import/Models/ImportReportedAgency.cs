@@ -6,11 +6,7 @@ namespace AuditImportService.Import.Models;
 
 public class ImportReportedAgency
 {
-    
-    [Key, Column("ID")]
-    public int Id { get; set; }
-    
-    [Column("AUDITYEAR")]
+    [JsonProperty("AUDITYEAR")]
     public short Audityear { get; set; }
 
     [JsonProperty("AGENCYCFDA")]

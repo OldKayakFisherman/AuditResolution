@@ -85,5 +85,5 @@ public class Award
         public string? DefaultClusterName { get; set; }
 
         public IList<Finding> Findings { get; set; }
-
+    
 }

@@ -22,4 +22,6 @@ public class CAPText
     [Column("CHARTSTABLES")] 
     public string? Chartstables { get; set; }
     
+  
+    
 }

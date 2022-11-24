@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AuditImportService.Data.Entities;
 
-[Table("ADDITIONAL_DUNS")]
+[Table("ADDITIONAL_UEIS")]
 public class AdditionalUEI
 {
     [Key, Column("ID")]
