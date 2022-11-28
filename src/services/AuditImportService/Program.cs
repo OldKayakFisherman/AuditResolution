@@ -1,3 +1,4 @@
+using AuditImportService.Configuration;
 using AuditImportService.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
 
 // Add services to the container.
+builder.BuildCustomRequiredDependencies();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
