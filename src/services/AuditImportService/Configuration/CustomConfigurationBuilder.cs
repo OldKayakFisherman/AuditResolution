@@ -1,4 +1,5 @@
 using AuditImportService.Import.Parsers;
+using AuditImportService.Middleware;
 
 namespace AuditImportService.Configuration;
 
@@ -21,5 +22,10 @@ public static class CustomConfigurationBuilder
         builder.Services.Configure<AppSettings>(
             builder.Configuration.GetSection("AppSettings")
         );
+    }
+
+    public static void ConfigureCustomMiddleware(this IApplicationBuilder builder)
+    {
+        builder.UseErrorHandlerMiddleware();
     }
 }

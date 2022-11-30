@@ -28,6 +28,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.ConfigureCustomMiddleware();
+
 app.UseAuthorization();
 
 app.MapControllers();
