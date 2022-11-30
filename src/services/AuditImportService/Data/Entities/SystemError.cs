@@ -8,9 +8,12 @@ public class SystemError
     [Key, Column("ID")] 
     public int Id { get; set; }
 
-    [Column("MESSAGE")]
-    public string Message { get; set; }
+    [Column("MESSAGE")] 
+    public string Message { get; set; } = "System Error";
 
+    [Column("EXCEPTION_TYPE")]
+    public string? ExceptionType { get; set; }
+    
     [Column("STACK_TRACE")] 
     public string? StackTrace { get; set; }
 
@@ -20,10 +23,11 @@ public class SystemError
     [Column("REQUEST_PATH")] 
     public string? RequestPath { get; set; }
 
-    [Column("REQUEST_BODY")] 
-    public string RequestBody { get; set; }
+    [Column("REQUEST_HEADERS")] 
+    public string? RequestHeaders { get; set; }
 
     [Column("REMOTE_ADDRESS")] 
     public string? RemoteAddress { get; set; }
+
     
 }
