@@ -7,7 +7,7 @@ public class ErrorRepository
 
     public ErrorRepository(ApplicationDbContext ctx)
     {
-        
+        _ctx = ctx;
     }
     
 }
