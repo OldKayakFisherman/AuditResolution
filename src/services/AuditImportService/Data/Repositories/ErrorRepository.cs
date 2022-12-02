@@ -14,7 +14,8 @@ public class ErrorRepository
 
     public void AddError(SystemError error)
     {
-        
+        _ctx.SystemErrors.Add(error);
+        _ctx.SaveChanges();
     }
     
 }
