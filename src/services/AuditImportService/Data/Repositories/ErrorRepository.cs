@@ -1,4 +1,6 @@
-﻿namespace AuditImportService.Data.Repositories;
+﻿using AuditImportService.Data.Entities;
+
+namespace AuditImportService.Data.Repositories;
 
 public class ErrorRepository
 {
@@ -8,6 +10,11 @@ public class ErrorRepository
     public ErrorRepository(ApplicationDbContext ctx)
     {
         _ctx = ctx;
+    }
+
+    public void AddError(SystemError error)
+    {
+        
     }
     
 }
