@@ -29,5 +29,6 @@ public class ApplicationDbContext: DbContext
     public DbSet<ReportedAgency> ReportedAgencies { get; set; }
     public DbSet<ReportRevision> ReportRevisions { get; set; }
     public DbSet<SystemError> SystemErrors { get; set; }
+    public DbSet<TrafficLog> TrafficLogs { get; set; }
 
 }
