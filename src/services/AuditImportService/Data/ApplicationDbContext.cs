@@ -28,6 +28,6 @@ public class ApplicationDbContext: DbContext
     public DbSet<Passthrough> Passthroughs { get; set; }
     public DbSet<ReportedAgency> ReportedAgencies { get; set; }
     public DbSet<ReportRevision> ReportRevisions { get; set; }
-    
+    public DbSet<SystemError> SystemErrors { get; set; }
 
 }
