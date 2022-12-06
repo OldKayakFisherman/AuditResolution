@@ -11,7 +11,6 @@ namespace AuditResolution.ReportDashboard.Configuration
             builder.Services.ConfigureLocalServices();
             builder.Services.ConfigureParsers();
             builder.ConfigureSettings();
-            
         }
 
         private static void ConfigureParsers(this IServiceCollection services)
