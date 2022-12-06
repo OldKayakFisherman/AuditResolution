@@ -1,6 +1,4 @@
-﻿using AuditResolution.Infrastructure.Configuration;
-using AuditResolution.Infrastructure.Import.Parsers;
-using Microsoft.Extensions.Http;
+﻿using Microsoft.Extensions.Http;
 
 namespace AuditResolution.ReportDashboard.Configuration
 {
@@ -19,14 +17,12 @@ namespace AuditResolution.ReportDashboard.Configuration
         private static void ConfigureParsers(this IServiceCollection services)
         {
             services.AddHttpClient();
-            services.AddTransient<DbKeyParser>();
+            
         }
 
         private static void ConfigureSettings(this WebApplicationBuilder builder)
         {
-            builder.Services.Configure<AppSettings>(
-                builder.Configuration.GetSection("AppSettings")
-            );
+           
         }
 
         private static void ConfigureDataRepositories(this IServiceCollection services)
