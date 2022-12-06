@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{27
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditImportService.Tests", "tests\services\AuditImportService.Tests\AuditImportService.Tests.csproj", "{1D94D9C0-D16E-421C-9C8C-3C5F767CB002}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditResolution.Common", "src\AuditResolution.Common\AuditResolution.Common.csproj", "{76D2EC2D-C420-4204-802E-078562FF043D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{1D94D9C0-D16E-421C-9C8C-3C5F767CB002}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D94D9C0-D16E-421C-9C8C-3C5F767CB002}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D94D9C0-D16E-421C-9C8C-3C5F767CB002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D2EC2D-C420-4204-802E-078562FF043D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D2EC2D-C420-4204-802E-078562FF043D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D2EC2D-C420-4204-802E-078562FF043D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D2EC2D-C420-4204-802E-078562FF043D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{75B4BF04-6F11-4347-8598-5B3762B7AA56} = {08FDC935-7569-42A5-8A58-7933A127DD5E}
 		{27EDF14D-504A-49DF-B3A5-389E455088FC} = {377C0BFF-80F9-4F02-92C6-2FFF5ED6B1FF}
 		{1D94D9C0-D16E-421C-9C8C-3C5F767CB002} = {27EDF14D-504A-49DF-B3A5-389E455088FC}
+		{76D2EC2D-C420-4204-802E-078562FF043D} = {96AF3BA6-8AB1-4258-AF90-86F030F2A9F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2394E71A-B66B-48CB-9129-034F3302C4EA}

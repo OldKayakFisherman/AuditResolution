@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using AuditImportService.Data.Entities;
+using AuditImportService.Data.Repositories;
 
 namespace AuditImportService.Middleware;
 
@@ -14,9 +15,12 @@ public class TrafficLoggerMiddleware
 
         public async Task InvokeAsync(HttpContext context /* other dependencies */)
         {
-            ITrafficLoggerService service = context.RequestServices.GetService<ITrafficLoggerService>();
+            TrafficLogRepository? repo = context.RequestServices.GetService<TrafficLogRepository>();
 
-            await service.LogTraffic(CreateLogParameter(context), CancellationToken.None);
+            if (repo != null)
+            {
+                repo.AddTrafficLog(CreateLog(context));
+            }
 
             await next(context);
         }
@@ -80,7 +84,7 @@ public class TrafficLoggerMiddleware
                 return sb.ToString();
             };
 
-            TrafficLog log = new TrafficLogParameter();
+            TrafficLog log = new TrafficLog();
 
             log.Host = ctx.Request.Host.Host;
             log.LocalPort = ctx.Connection.LocalPort;
@@ -93,12 +97,20 @@ public class TrafficLoggerMiddleware
             log.RequestProtocol = ctx.Request.Protocol;
             log.RequestQuery = parseQueryString();
             log.RequestScheme = ctx.Request.Scheme;
-            log.LocalIP = ctx.Connection.LocalIpAddress.ToString();
-            log.RemoteIP = ctx.Connection.RemoteIpAddress.ToString();
+            log.LocalIP = ctx.Connection.LocalIpAddress?.ToString();
+            log.RemoteIP = ctx.Connection.RemoteIpAddress?.ToString();
             log.RequestContentType = ctx.Request.ContentType;
             log.RequestQueryString = ctx.Request.QueryString.Value;
             log.TrafficDate = DateTime.Now;
 
             return log;
         }
+}
+
+public static class TrafficLoggerMiddlewareExtensions
+{
+    public static IApplicationBuilder UseTrafficLoggerMiddleware(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<TrafficLoggerMiddleware>();
+    }
 }

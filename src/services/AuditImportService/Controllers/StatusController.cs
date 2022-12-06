@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AuditImportService.Configuration;
+using AuditImportService.Services;
+using AuditImportService.Services.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +14,20 @@ namespace AuditImportService.Controllers
     [ApiController]
     public class StatusController : ControllerBase
     {
-        [HttpGet("CurrentStatus")]
-        public CurrentStatus Get()
+
+        private readonly StatusService _statusService;
+
+        public StatusController(StatusService statusService)
         {
-            return new CurrentStatus();
+            _statusService = statusService;
+        }
+        
+        
+        [HttpGet("CurrentStatus")]
+        public object Get()
+        {
+            //return new CurrentStatus();
+            return _statusService.GetCurrentStatus();
         }
     }
 }
