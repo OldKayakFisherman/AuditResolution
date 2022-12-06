@@ -16,7 +16,6 @@ namespace AuditResolution.ReportDashboard.Configuration
         private static void ConfigureParsers(this IServiceCollection services)
         {
             services.AddHttpClient();
-            
         }
 
         private static void ConfigureSettings(this WebApplicationBuilder builder)
