@@ -26,24 +26,27 @@ public class ImportServiceScheduler
 
         IList<SchedulerJobConfigEntry>? jobEntries = JsonConvert.DeserializeObject<IList<SchedulerJobConfigEntry>>(json);
 
-        foreach (var jobEntry in jobEntries)
+        if (jobEntries != null)
         {
-            if (jobEntry.Enabled)
+            foreach (var jobEntry in jobEntries)
             {
-                Type? jobType = Type.GetType($"{jobEntry.JobNamespace}.{jobEntry.JobClass}");
+                if (jobEntry.Enabled)
+                {
+                    Type? jobType = Type.GetType($"{jobEntry.JobNamespace}.{jobEntry.JobClass}");
 
-                IJobDetail jobDetail = JobBuilder.Create(jobType)
-                    .UsingJobData("cfg.namespace", jobEntry.JobNamespace)
-                    .UsingJobData("cfg.class", jobEntry.JobClass)
-                    .UsingJobData("cfg.description", jobEntry.Description)
-                    .UsingJobData("cfg.cronexpression", jobEntry.CronExpression)
-                    .Build();
+                    IJobDetail jobDetail = JobBuilder.Create(jobType!)
+                        .UsingJobData("cfg.namespace", jobEntry.JobNamespace)
+                        .UsingJobData("cfg.class", jobEntry.JobClass)
+                        .UsingJobData("cfg.description", jobEntry.Description)
+                        .UsingJobData("cfg.cronexpression", jobEntry.CronExpression)
+                        .Build();
 
-                ITrigger trigger = TriggerBuilder.Create()
-                    .WithCronSchedule(jobEntry.CronExpression)
-                    .Build();
+                    ITrigger trigger = TriggerBuilder.Create()
+                        .WithCronSchedule(jobEntry.CronExpression!)
+                        .Build();
 
-                await scheduler.ScheduleJob(jobDetail, trigger);
+                    await scheduler.ScheduleJob(jobDetail, trigger);
+                }
             }
         }
     }
