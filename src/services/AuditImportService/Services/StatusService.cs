@@ -1,3 +1,4 @@
+using System.Reflection;
 using AuditImportService.Data.Entities;
 using AuditImportService.Data.Repositories;
 using AuditImportService.Services.Results;
@@ -25,6 +26,12 @@ public class StatusService
 
         result.CurrentTraffic = _trafficLogRepository.GetDailyTraffic(DateTime.Now);
         result.CurrentErrors = _errorRepository.GetDailyErrors(DateTime.Now);
+
+        result.RuntimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        
+        result.SchedulerConfigFilePresent = File.Exists(Path.Combine(
+            result.RuntimeDirectory, "SchedulerConfig.json"
+        ));
         
         return result;
     }

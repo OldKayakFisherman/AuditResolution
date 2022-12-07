@@ -9,6 +9,9 @@ public class SystemStatusResult
     public IList<SystemError> CurrentErrors { get; set; } = new List<SystemError>();
     public IList<TrafficLog> CurrentTraffic { get; set; } = new List<TrafficLog>();
 
+    public string? RuntimeDirectory { get; set; }
+    public bool SchedulerConfigFilePresent { get; set; }
+
     public SystemStatusResult() { }
 
    

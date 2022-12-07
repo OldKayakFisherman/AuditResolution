@@ -1,0 +1,9 @@
+[
+  {
+    "namespace": "",
+    "class": "",
+    "enabled": true,
+    "cronExpression": "0 0 6 * * ?",
+    "description": "Lorem ..."
+  }
+]
