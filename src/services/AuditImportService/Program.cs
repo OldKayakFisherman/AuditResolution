@@ -1,6 +1,14 @@
 using AuditImportService.Configuration;
 using AuditImportService.Data;
 using Microsoft.EntityFrameworkCore;
+using NLog;
+using NLog.Web;
+
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+logger.Debug("Starting AuditImportService");
+
+try
+{
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +16,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+
+//NLog
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
 // Add services to the container.
 builder.BuildCustomRequiredDependencies();
@@ -35,3 +47,16 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+}
+catch (Exception exception)
+{
+    // NLog: catch setup errors
+    logger.Error(exception, "Stopped AuditImportService because of exception");
+    throw;
+}
+finally
+{
+    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+    NLog.LogManager.Shutdown();
+}
