@@ -6,22 +6,37 @@ namespace TestHelpers
 {
     public static class AppSettingsHelper
     {
-        /*
-        public static AppSettings? GetAppSettings(string settingsFile)
+        
+        /// <summary>
+        /// Returns a settings object from the specified file with a key
+        /// </summary>
+        /// <param name="settingsFile"></param>
+        /// <param name="settingsKey"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <remarks>Settings File must have a value associated</remarks>
+        public static T? GetAppSettings<T>(string settingsFile, string settingsKey)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile(settingsFile, optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables()
-                .AddUserSecrets(Assembly.GetCallingAssembly(),false);
+            var settings = default(T);
+            
+            var configDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            IConfiguration config = builder.Build();
+            if (configDir != null)
+            {
+                var builder = new ConfigurationBuilder()
+                    .SetBasePath( configDir)
+                    .AddJsonFile(settingsFile, optional: false, reloadOnChange: true)
+                    .AddEnvironmentVariables()
+                    .AddUserSecrets(Assembly.GetCallingAssembly(),false);
 
-            AppSettings? settings = config.GetRequiredSection("AppSettings").Get<AppSettings>();
+                IConfiguration config = builder.Build();
+
+                settings = config.GetRequiredSection(settingsKey).Get<T>();
+            }
 
             return settings;
             
         }
-        */
+        
     }
 }

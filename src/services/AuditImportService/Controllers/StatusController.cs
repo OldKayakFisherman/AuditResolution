@@ -14,11 +14,12 @@ namespace AuditImportService.Controllers
     [ApiController]
     public class StatusController : ControllerBase
     {
-
+        private readonly ILogger<StatusController> _logger;
         private readonly StatusService _statusService;
 
-        public StatusController(StatusService statusService)
+        public StatusController(ILogger<StatusController> logger, StatusService statusService)
         {
+            _logger = logger;
             _statusService = statusService;
         }
         

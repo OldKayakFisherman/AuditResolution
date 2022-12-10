@@ -5,13 +5,20 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
+
+        <UserSecretsId>c423323f-ba0b-476b-8fff-3a89622dbdd9</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0"/>
-        <PackageReference Include="NUnit" Version="3.13.2"/>
-        <PackageReference Include="NUnit3TestAdapter" Version="4.0.0"/>
-        <PackageReference Include="coverlet.collector" Version="3.1.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+        <PackageReference Include="NUnit" Version="3.13.2" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+        <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\src\services\AuditImportService\AuditImportService.csproj" />
+      <ProjectReference Include="..\..\TestHelpers\TestHelpers.csproj" />
     </ItemGroup>
 
 </Project>
