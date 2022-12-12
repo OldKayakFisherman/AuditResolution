@@ -50,11 +50,24 @@ public class DBKeyParser
                 {
                     string responseBody = await response.Content.ReadAsStringAsync();
 
-                    //if (!String.IsNullOrEmpty(responseBody))
-                    //{
-                    //IList<ImportDbKey> importDbKeys =
-                    //    JsonConvert.DeserializeObject<IList<ImportDbKey>>(responseBody);
-                    //}
+                    if (!String.IsNullOrEmpty(responseBody))
+                    {
+                        IList<ImportDbKey>? importDbKeys =
+                            JsonConvert.DeserializeObject<IList<ImportDbKey>>(responseBody);
+
+                        if (importDbKeys != null)
+                        {
+                            DBKeyParseRecord dbKeyParseRecord = new DBKeyParseRecord();
+                            dbKeyParseRecord.ParsedFirewallDate = firewallDate;
+                            
+                            foreach (var dbKey in importDbKeys)
+                            {
+                                dbKeyParseRecord.ParsedDBKeyAuditYears.Add(
+                                    new Tuple<int, short>(dbKey.DbKey, dbKey.AuditYear)
+                                    );
+                            }
+                        }
+                    }
                 }
 
 

@@ -614,6 +614,38 @@ namespace AuditImportService.Migrations
                     b.ToTable("CPAS");
                 });
 
+            modelBuilder.Entity("AuditImportService.Data.Entities.DBKeyImportLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("ID");
+
+                    b.Property<short>("AuditYear")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("AUDITYEAR");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("DATE_ADDED");
+
+                    b.Property<DateTime?>("DateImported")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("DATE_IMPORTED");
+
+                    b.Property<int>("DbKey")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("DBKEY");
+
+                    b.Property<bool>("PDFImported")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("PDF_IMPORTED");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DBKEY_IMPORT_LOG");
+                });
+
             modelBuilder.Entity("AuditImportService.Data.Entities.Finding", b =>
                 {
                     b.Property<int>("Id")

@@ -23,6 +23,7 @@ public static class CustomConfigurationBuilder
     {
         services.AddTransient<ErrorRepository>();
         services.AddTransient<TrafficLogRepository>();
+        services.AddTransient<FirewallDateRepository>();
     }
     
     private static void ConfigureParsers(this IServiceCollection services)

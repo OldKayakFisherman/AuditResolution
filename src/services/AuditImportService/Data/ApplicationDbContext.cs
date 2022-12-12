@@ -30,5 +30,6 @@ public class ApplicationDbContext: DbContext
     public DbSet<ReportRevision> ReportRevisions { get; set; }
     public DbSet<SystemError> SystemErrors { get; set; }
     public DbSet<TrafficLog> TrafficLogs { get; set; }
+    public DbSet<DBKeyImportLog> DbKeyImportLogs { get; set; }
 
 }
