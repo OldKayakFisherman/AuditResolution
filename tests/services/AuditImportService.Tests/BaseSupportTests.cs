@@ -1,4 +1,5 @@
 using AuditImportService.Configuration;
+using AuditImportService.Data;
 using NUnit.Framework;
 using TestHelpers;
 
@@ -17,6 +18,8 @@ public class BaseSupportTests
         Assert.IsNotNull(settings!.BaseDataFormUrl);
         Assert.IsNotNull(settings!.BaseDataImageUrl);
         Assert.IsNotNull(settings!.BaseDataDBKeyUrl);
+        Assert.IsNotNull(settings!.ImportStartDate);
+        Assert.IsNotNull(settings!.BatchDayLimit);
         
     }
 
@@ -24,5 +27,15 @@ public class BaseSupportTests
     public void TestHttpClient()
     {
         Assert.IsNotNull(new HttpClientHelper().GetHttpClient());
+    }
+
+    [Test]
+    public void TestInMemoryDatabase()
+    {
+        ApplicationDbContext ctx = LocalDBHelper.CreateDbContext();
+        
+        Assert.IsNotNull(ctx);
+        Assert.IsTrue(ctx.Database.CanConnect());
+        
     }
 }

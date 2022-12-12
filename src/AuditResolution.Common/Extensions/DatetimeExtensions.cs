@@ -11,4 +11,9 @@ public static class DatetimeExtensions
     {
         return new DateTime(sourceDate.Year, sourceDate.Month, sourceDate.Day, 23, 59, 59, 999);
     }
+
+    public static DateTime NextDay(this DateTime sourceDate)
+    {
+        return sourceDate.Add(new TimeSpan(1, 0, 0, 0));
+    }
 }
