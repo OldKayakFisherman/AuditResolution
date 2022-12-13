@@ -66,7 +66,11 @@ public class DBKeyParser
                                 dbKeyParseRecord.ParsedDBKeyAuditYears.Add(
                                     new Tuple<int, short>(dbKey.DbKey, dbKey.AuditYear)
                                     );
+                                
+                               
                             }
+                            
+                            result.ParseRecords.Add(dbKeyParseRecord);
                         }
                     }
                 }

@@ -29,7 +29,7 @@ public class DBKeyParserTests
 
         DBKeyParseResult parseResult = await parser.ParseDbKeys(); 
         
-        Assert.IsNotNull(await parser.ParseDbKeys());
-
+        Assert.IsNotNull(parseResult);
+        Assert.IsTrue(parseResult.ParseRecords.Count > 0);
     }
 }

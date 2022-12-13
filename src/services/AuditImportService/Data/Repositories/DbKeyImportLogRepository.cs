@@ -12,14 +12,8 @@ public class DbKeyImportLogRepository
         _ctx = ctx;
     }
 
-    public void AddImportLogRecord(int dbKey, short auditYear)
+    public void AddImportLogRecord(DBKeyImportLog log)
     {
-        DBKeyImportLog log = new DBKeyImportLog();
-        
-        log.DateAdded = DateTime.Now;
-        log.AuditYear = auditYear;
-        log.DbKey = dbKey;
-
         _ctx.DbKeyImportLogs.Add(log);
         _ctx.SaveChanges();
     }
@@ -41,6 +35,7 @@ public class DbKeyImportLogRepository
     public IList<DBKeyImportLog> GetUnImportedLogs(int batchSize)
     {
         return _ctx.DbKeyImportLogs.OrderBy(x => x.DateImported)
+            .Where(x => x.DateImported == null)
             .Take(batchSize)
             .ToList();
     }
