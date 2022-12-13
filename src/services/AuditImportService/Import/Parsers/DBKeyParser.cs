@@ -28,15 +28,16 @@ public class DBKeyParser
         _firewallDateRepository = firewallDateRepository;
     }
 
-    public async Task<DBKeyParseResult> ParseDBKeys()
+    public async Task<DBKeyParseResult> ParseDbKeys()
     {
-        DBKeyParseResult result = new DBKeyParseResult();
-
-        result.ParseDate = DateTime.Now;
+        DBKeyParseResult result = new DBKeyParseResult
+        {
+            ParseDate = DateTime.Now
+        };
 
         IList<DateTime> datesToParse = CalculateFirewallRequestDates();
 
-        if (datesToParse != null && datesToParse.Count > 0)
+        if (datesToParse.Count > 0)
         {
             foreach (var firewallDate in datesToParse)
             {

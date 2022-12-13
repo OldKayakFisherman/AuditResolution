@@ -5,6 +5,7 @@ using AuditImportService.Configuration;
 using AuditImportService.Data;
 using AuditImportService.Data.Repositories;
 using AuditImportService.Import.Parsers;
+using AuditImportService.Import.Parsers.Results;
 using Microsoft.Extensions.Options;
 using NUnit.Framework;
 using TestHelpers;
@@ -26,9 +27,9 @@ public class DBKeyParserTests
 
         DBKeyParser parser = new DBKeyParser(client, options, firewallDateRepository);
 
-        //client.BaseAddress = new Uri(settings.BaseDataDBKeyUrl);
+        DBKeyParseResult parseResult = await parser.ParseDbKeys(); 
         
-        Assert.IsNotNull(await parser.ParseDBKeys());
+        Assert.IsNotNull(await parser.ParseDbKeys());
 
     }
 }
