@@ -8,4 +8,5 @@ public class AppSettings
     public string ApplicationVersion { get; set; }
     public DateTime? ImportStartDate { get; set; }
     public int? BatchDayLimit { get; set; }
+    public int? BatchImportLimit{ get; set; }
 }

@@ -5,9 +5,7 @@ using AuditImportService.Data.Repositories;
 using AuditImportService.Import.Models;
 using AuditImportService.Import.Parsers.Results;
 using Microsoft.Extensions.Options;
-using AuditResolution.Common;
 using AuditResolution.Common.Extensions;
-using Microsoft.AspNetCore.Razor.Language;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -66,8 +64,6 @@ public class DBKeyParser
                                 dbKeyParseRecord.ParsedDBKeyAuditYears.Add(
                                     new Tuple<int, short>(dbKey.DbKey, dbKey.AuditYear)
                                     );
-                                
-                               
                             }
                             
                             result.ParseRecords.Add(dbKeyParseRecord);
