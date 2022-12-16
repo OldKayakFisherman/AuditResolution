@@ -5,7 +5,7 @@ namespace AuditImportService.Import.Models;
 public class ImportDUN
 {
     [JsonProperty("SEQNUM")] 
-    public short SeqNum {get;set;}
+    public string? SeqNum {get;set;}
   
     [JsonProperty("DUNS")]
     public string? DUNs {get;set;}

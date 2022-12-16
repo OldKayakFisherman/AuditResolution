@@ -8,5 +8,5 @@ public class ImportUEI
     public string? UEI { get; set; }
     
     [JsonProperty("SEQNUM")]
-    public short? SeqNum { get; set; }
+    public string? SeqNum { get; set; }
 }

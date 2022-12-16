@@ -7,7 +7,7 @@ namespace AuditImportService.Import.Models;
 public class ImportReportedAgency
 {
     [JsonProperty("AUDITYEAR")]
-    public short Audityear { get; set; }
+    public string? Audityear { get; set; }
 
     [JsonProperty("AGENCYCFDA")]
     public string? Agencycfda { get; set; }
@@ -25,7 +25,7 @@ public class ImportReportedAgency
     public string? Final { get; set; }
 
     [JsonProperty("VERSION")]
-    public short Version { get; set; }
+    public string? Version { get; set; }
 
 
 }

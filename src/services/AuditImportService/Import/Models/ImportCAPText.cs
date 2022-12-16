@@ -5,16 +5,16 @@ namespace AuditImportService.Import.Models;
 public class ImportCAPText
 {
     [JsonProperty("SEQ_NUMBER")] 
-    public short SeqNumber { get; set; }
+    public string? SeqNumber { get; set; }
 
     [JsonProperty("AUDITYEAR")] 
-    public short AuditYear { get; set; }
+    public string? AuditYear { get; set; }
 
     [JsonProperty("REPORTID")] 
-    public int Reportid { get; set; }
+    public string? Reportid { get; set; }
 
     [JsonProperty("VERSION")] 
-    public short Version { get; set; }
+    public string? Version { get; set; }
 
     [JsonProperty("FINDINGREFNUMS")] 
     public string? Findingrefnums { get; set; }
@@ -26,5 +26,5 @@ public class ImportCAPText
     public string? Chartstables { get; set; }
 
     [JsonProperty("ROWID")] 
-    public int? RowId { get; set; }
+    public string? RowId { get; set; }
 }

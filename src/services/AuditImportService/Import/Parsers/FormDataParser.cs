@@ -27,7 +27,7 @@ public class FormDataParser
 
     public async Task<IList<ImportAuditPackage>> ImportFormData()
     {
-        int batchImportLimit = _settings.BatchImportLimit.HasValue ? _settings.BatchImportLimit.Value : 1000;
+        int batchImportLimit = _settings.BatchImportLimit ?? 1000;
         
         IList<DBKeyImportLog> unImportedLogs = _dbKeyImportLogRepository.GetUnImportedLogs(batchImportLimit);
         List<ImportAuditPackage> auditPackages = new List<ImportAuditPackage>();

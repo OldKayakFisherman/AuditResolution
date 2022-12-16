@@ -5,13 +5,13 @@ namespace AuditImportService.Import.Models
     public class ImportAudit
     {
         [JsonProperty("AUDITYEAR")]
-        public short Audityear { get; set; }
+        public string? Audityear { get; set; }
 
         [JsonProperty("FYENDDATE")]
-        public DateTimeOffset Fyenddate { get; set; }
+        public string? Fyenddate { get; set; }
 
         [JsonProperty("FYSTARTDATE")]
-        public DateTimeOffset Fystartdate { get; set; }
+        public string? Fystartdate { get; set; }
 
         [JsonProperty("AUDITTYPE")]
         public string? Audittype { get; set; }
@@ -20,7 +20,7 @@ namespace AuditImportService.Import.Models
         public string? Periodcovered { get; set; }
 
         [JsonProperty("NUMBERMONTHS")]
-        public short? Numbermonths { get; set; }
+        public string? Numbermonths { get; set; }
 
         [JsonProperty("MULTIPLEEINS")]
         public string? MultipleEins { get; set; }
@@ -89,7 +89,7 @@ namespace AuditImportService.Import.Models
         public string? CPAEmail { get; set; }
 
         [JsonProperty("CPADATESIGNED")]
-        public DateTimeOffset CPADateSigned { get; set; }
+        public string? CPADateSigned { get; set; }
 
         [JsonProperty("COG_OVER")]
         public string? COGOver { get; set; }
@@ -116,13 +116,13 @@ namespace AuditImportService.Import.Models
         public string? TypeReportMP { get; set; }
 
         [JsonProperty("DOLLARTHRESHOLD")]
-        public long? DollarThreshold { get; set; }
+        public string? DollarThreshold { get; set; }
 
         [JsonProperty("LOWRISK")]
         public string? LowRisk { get; set; }
 
         [JsonProperty("TOTFEDEXPEND")]
-        public long? TotalFederalExpendature { get; set; }
+        public string? TotalFederalExpendature { get; set; }
 
         [JsonProperty("QCOSTS")]
         public string? QCosts { get; set; }

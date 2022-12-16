@@ -26,13 +26,13 @@ public class ImportAuditFinding
     public string? FindingRefNums {get;set;}
     
     [JsonProperty("ELECAUDITSID")]
-    public int ElecAuditsId { get; set; }
+    public string? ElecAuditsId { get; set; }
     
     [JsonProperty("MODIFIEDOPINION")]
     public string? ModifiedOpinion {get;set;}
     
     [JsonProperty("ROWID")]
-    public int? RowId { get; set; }
+    public string? RowId { get; set; }
     
     [JsonProperty("REPEATFINDING")]
     public string? RepeatFinding { get; set; }

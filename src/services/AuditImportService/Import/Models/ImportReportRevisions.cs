@@ -5,13 +5,13 @@ namespace AuditImportService.Import.Models;
 public class ImportReportRevisions
 {
     [JsonProperty("ELECRPTREVISIONID")]
-    public int ElecRptRevisionId { get; set; }
+    public string? ElecRptRevisionId { get; set; }
 
     [JsonProperty("REPORTID")]
-    public int ReportId { get; set; }
+    public string? ReportId { get; set; }
 
     [JsonProperty("VERSION")]
-    public int Version { get; set; }
+    public string? Version { get; set; }
 
     [JsonProperty("GENINFO")]
     public string? GenInfo { get; set; }

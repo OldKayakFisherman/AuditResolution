@@ -11,7 +11,7 @@ public class ImportAward
         public string? FederalProgramName { get; set; }
 
         [JsonProperty("AMOUNT")]
-        public long Amount { get; set; }
+        public string? Amount { get; set; }
 
         [JsonProperty("MAJORPROGRAM")]
         public string? MajorProgram { get; set; }
@@ -44,16 +44,16 @@ public class ImportAward
         public string? Loans { get; set; }
 
         [JsonProperty("ELECAUDITSID")]
-        public long ElecauditsId { get; set; }
+        public string? ElecauditsId { get; set; }
 
         [JsonProperty("FINDINGSCOUNT")]
-        public int FindingsCount { get; set; }
+        public string? FindingsCount { get; set; }
         
         [JsonProperty("LOANBALANCE")]
-        public long? LoanBalance { get; set; }
+        public string? LoanBalance { get; set; }
 
         [JsonProperty("PASSTHROUGHAMOUNT")]
-        public long? PassthroughAmount { get; set; }
+        public string? PassthroughAmount { get; set; }
 
         [JsonProperty("AWARDIDENTIFICATION")]
         public string? AwardIdentification { get; set; }
@@ -68,10 +68,10 @@ public class ImportAward
         public string? StateClustername { get; set; }
 
         [JsonProperty("PROGRAMTOTAL")]
-        public long? ProgramTotal { get; set; }
+        public string? ProgramTotal { get; set; }
 
         [JsonProperty("CLUSTERTOTAL")]
-        public long? ClusterTotal { get; set; }
+        public string? ClusterTotal { get; set; }
 
         [JsonProperty("OTHERCLUSTERNAME")]
         public string? OtherClusterName { get; set; }
