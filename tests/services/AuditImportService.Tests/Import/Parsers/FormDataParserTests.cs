@@ -17,7 +17,7 @@ namespace AuditImportService.Tests.Import.Parsers;
 public class FormDataParserTests
 {
     [Test]
-    public async Task TestImportFormDate()
+    public async Task TestImportFormData()
     {
         ApplicationDbContext ctx = LocalDBHelper.CreateDbContext();
         HttpClient client = new HttpClientHelper().GetHttpClient();
@@ -35,6 +35,5 @@ public class FormDataParserTests
         
         Assert.True(packages.Count > 0);
         
-
     }
 }

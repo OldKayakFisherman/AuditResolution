@@ -15,9 +15,6 @@ public class AuditTimeframe
     [Column("AUDITOR_SUBMIT_DATE")]
     public DateTime AuditorSubmitDate { get; set; }
     
-    [Column("FAC_FIREWALL_DATE")] 
-    public DateTime FACFirewallDate { get; set; }
-
     [Column("SYSTEM_IMPORT_DATE")] 
     public DateTime SystemImportDate { get; set; }
     

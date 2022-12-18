@@ -315,10 +315,6 @@ namespace AuditImportService.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("AUDITOR_SUBMIT_DATE");
 
-                    b.Property<DateTime>("FACFirewallDate")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("FAC_FIREWALL_DATE");
-
                     b.Property<DateTime>("Fyenddate")
                         .HasColumnType("TEXT")
                         .HasColumnName("FYENDDATE");

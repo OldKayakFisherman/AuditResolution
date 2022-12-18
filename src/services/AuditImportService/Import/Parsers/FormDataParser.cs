@@ -45,20 +45,17 @@ public class FormDataParser
                 {
                     string responseBody = await response.Content.ReadAsStringAsync();
 
-                    try
+                    ImportAuditPackage? package = JsonConvert.DeserializeObject<ImportAuditPackage>(responseBody);
+
+                    if (package != null)
                     {
-                        ImportAuditPackage? package = JsonConvert.DeserializeObject<ImportAuditPackage>(responseBody);
+                        auditPackages.Add(package);
                     }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
+
                 }
             }
         }
         
-
         return auditPackages;
     }
-    
 }

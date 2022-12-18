@@ -16,4 +16,18 @@ public static class DatetimeExtensions
     {
         return sourceDate.Add(new TimeSpan(1, 0, 0, 0));
     }
+
+    public static DateTime ParseDateTimeOrDefault(this string? sourceDate)
+    {
+        DateTime parseOut = DateTime.Now;
+        DateTime retval = DateTime.Now;
+        
+        if (DateTime.TryParse(sourceDate, out parseOut))
+        {
+            retval = parseOut;
+        }
+
+
+        return retval;
+    }
 }
