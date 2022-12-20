@@ -16,7 +16,7 @@ public class Award
         public string? FederalProgramName { get; set; }
 
         [Column("AMOUNT")]
-        public long Amount { get; set; }
+        public decimal Amount { get; set; }
 
         [Column("MAJORPROGRAM")]
         public bool MajorProgram { get; set; }
@@ -40,7 +40,7 @@ public class Award
         public string? CFDAExt { get; set; }
 
         [Column("TYPEREPORT_MP")]
-        public string? TypeReportMP { get; set; }
+        public string? TypeReportMajorProgram { get; set; }
 
         [Column("ARRA")]
         public bool ARRA { get; set; }
@@ -84,6 +84,6 @@ public class Award
         [Column("DEFAULT_CLUSTER_NAME")]
         public string? DefaultClusterName { get; set; }
 
-        public IList<Finding> Findings { get; set; }
+        public IList<Finding>? Findings { get; set; }
     
 }
