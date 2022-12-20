@@ -10,13 +10,13 @@ public class Finding
     public int Id { get; set; }
     
     [Column("QCOSTS")]
-    public bool QCosts {get;set;}
+    public bool QuestionedCosts {get;set;}
     
     [Column("OTHERFINDINGS")]
     public bool OtherFindings {get;set;}
     
     [Column("SIGNIFICANTDEFICIENCY")]
-    public string? SignificantDeficiency {get;set;}
+    public bool SignificantDeficiency {get;set;}
     
     [Column("MATERIALWEAKNESS")]
     public bool MaterialWeakness {get;set;}

@@ -28,7 +28,7 @@ public class Award
         public string? FindingRefNums { get; set; }
 
         [Column("RD")]
-        public bool RD { get; set; }
+        public bool ResearchAndDevelopment { get; set; }
 
         [Column("DIRECT")]
         public bool Direct { get; set; }
@@ -49,10 +49,10 @@ public class Award
         public bool Loans { get; set; }
         
         [Column("LOANBALANCE")]
-        public long? LoanBalance { get; set; }
+        public decimal? LoanBalance { get; set; }
 
         [Column("PASSTHROUGHAMOUNT")]
-        public long? PassthroughAmount { get; set; }
+        public decimal? PassthroughAmount { get; set; }
 
         [Column("AWARDIDENTIFICATION")]
         public string? AwardIdentification { get; set; }
@@ -67,10 +67,10 @@ public class Award
         public string? StateClustername { get; set; }
 
         [Column("PROGRAMTOTAL")]
-        public long? ProgramTotal { get; set; }
+        public decimal? ProgramTotal { get; set; }
 
         [Column("CLUSTERTOTAL")]
-        public long? ClusterTotal { get; set; }
+        public decimal? ClusterTotal { get; set; }
 
         [Column("OTHERCLUSTERNAME")]
         public string? OtherClusterName { get; set; }

@@ -1,5 +1,6 @@
 using AuditImportService.Data.Entities;
 using AuditImportService.Import.Models;
+using AuditResolution.Common.Extensions;
 
 namespace AuditImportService.Import.Converters;
 
@@ -21,7 +22,21 @@ public class FindingConverter
 
                 foreach (var importAuditFinding in filteredImportFindings)
                 {
+                    Finding finding = new Finding();
+
+                    finding.SignificantDeficiency = importAuditFinding.SignificantDeficiency.ConvertFromYNString();
+                    finding.OtherFindings = importAuditFinding.OtherFindings.ConvertFromYNString();
+                    finding.RepeatFinding = importAuditFinding.RepeatFinding.ConvertFromYNString();
+                    finding.QuestionedCosts = importAuditFinding.QCosts.ConvertFromYNString();
+                    finding.MaterialWeakness = importAuditFinding.MaterialWeakness.ConvertFromYNString();
+                    finding.ModifiedOpinion = importAuditFinding.ModifiedOpinion.ConvertFromYNString();
+                    finding.TypeRequirement = importAuditFinding.TypeRequirement;
+                    finding.FindingRefNums = importAuditFinding.FindingRefNums;
+                    finding.OtherNonCompliance = importAuditFinding.OtherFindings.ConvertFromYNString();
+                    finding.PriorFindingRefNums = importAuditFinding.PriorFindingRefNums;
                     
+                    findings.Add(finding);
+
                 }
                 
                 
