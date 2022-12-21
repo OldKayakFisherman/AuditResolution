@@ -10,10 +10,13 @@ public class AwardConverter
 {
     public IList<Award>? Convert(ImportAuditPackage auditPackage)
     {
-        IList<Award>? awards = new List<Award>();
+        IList<Award>? awards = null;
 
         if (auditPackage.Awards != null)
         {
+
+            awards = new List<Award>();
+            
             foreach (var importAward in auditPackage.Awards)
             {
                 Award award = new Award();

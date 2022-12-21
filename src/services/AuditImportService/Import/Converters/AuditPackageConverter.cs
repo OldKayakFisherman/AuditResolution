@@ -26,6 +26,7 @@ public class AuditPackageConverter
             auditPackage.Audittype = importAuditPackage.Audit.Audittype;
         }
 
+        auditPackage.CapText = new CAPTextConverter().Convert(importAuditPackage);
         
         
 

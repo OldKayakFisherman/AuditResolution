@@ -67,13 +67,13 @@ public class AuditPackage
     public AuditIndicators? AuditIndicators { get; set; }
 
     public IList<Award>? Awards { get; set; }
-    public IList<CAPText> CapText { get; set; }
-    public IList<FindingText> FindingTexts { get; set; }
-    public IList<AdditionalEIN> AddtionalEINs { get; set; }
-    public IList<AdditionalDUN> AddtionalDUNs { get; set; }
-    public IList<AdditionalUEI> AdditionalUEIs { get; set; }
-    public IList<Passthrough> Passthroughs { get; set; }
-    public IList<ReportedAgency> ReportedAgencies { get; set; }
-    public IList<ReportRevision> ReportRevisions { get; set; }
+    public IList<CAPText>? CapText { get; set; }
+    public IList<FindingText>? FindingTexts { get; set; }
+    public IList<AdditionalEIN>? AddtionalEINs { get; set; }
+    public IList<AdditionalDUN>? AddtionalDUNs { get; set; }
+    public IList<AdditionalUEI>? AdditionalUEIs { get; set; }
+    public IList<Passthrough>? Passthroughs { get; set; }
+    public IList<ReportedAgency>? ReportedAgencies { get; set; }
+    public IList<ReportRevision>? ReportRevisions { get; set; }
 
 }
