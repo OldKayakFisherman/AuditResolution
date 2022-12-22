@@ -51,7 +51,10 @@ namespace AuditImportService.Import.Models
         
         [JsonProperty("additionalUEIS")]
         public IList<ImportUEI>? UEIs { get; set; }
+
+        public int DbKey { get; set; }
         
-        
+
+
     }
 }

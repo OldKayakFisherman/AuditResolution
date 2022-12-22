@@ -30,9 +30,6 @@ public class AuditPackage
     [Column("NUMBERMONTHS")]
     public short? Numbermonths { get; set; }
     
-    [Column("CPADATESIGNED")]
-    public DateTime CPADateSigned { get; set; }
-    
     [Column("AUDITEECERTIFYNAME")]
     public string? AuditeeCertifyName { get; set; }
 
@@ -46,10 +43,10 @@ public class AuditPackage
     public string? COGAgency { get; set; }
     
     [Column("DOLLARTHRESHOLD")]
-    public long DollarThreshold { get; set; }
+    public decimal? DollarThreshold { get; set; }
 
     [Column("TOTFEDEXPEND")]
-    public long TotalFederalExpendature { get; set; }
+    public decimal TotalFederalExpendature { get; set; }
 
     [Column("TYPEOFENTITY")] 
     public string? TypeOfEntity { get; set; }
@@ -59,7 +56,6 @@ public class AuditPackage
 
     [Column("ENTITY_TYPE")] 
     public string? EntityType { get; set; }
-
     
     public Auditee? Auditee { get; set; }
     public CPA? CPA { get; set; }

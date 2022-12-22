@@ -19,6 +19,7 @@ public class AuditTimeframeConverter
             auditTimeframe.Fyenddate = package.Audit.Fyenddate.ParseDateTimeOrDefault();
             auditTimeframe.Fystartdate = package.Audit.Fystartdate.ParseDateTimeOrDefault();
             auditTimeframe.SystemImportDate = DateTime.Now;
+            auditTimeframe.CPADateSigned = package.Audit.CPADateSigned.ParseDateTimeOrDefault();
         }
 
         if (package.History != null)

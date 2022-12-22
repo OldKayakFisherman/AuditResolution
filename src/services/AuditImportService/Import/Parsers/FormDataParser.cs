@@ -49,6 +49,7 @@ public class FormDataParser
 
                     if (package != null)
                     {
+                        package.DbKey = dbKeyImportLog.DbKey;
                         auditPackages.Add(package);
                     }
 

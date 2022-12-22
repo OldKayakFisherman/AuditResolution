@@ -23,7 +23,9 @@ public class AuditTimeframe
 
     [Column("FYSTARTDATE")]
     public DateTime Fystartdate { get; set; }
-    
+
+    [Column("CPA_DATE_SIGNED")] public DateTime? CPADateSigned { get; set; }
+
     public int? AuditPackageId { get; set; }
     public AuditPackage? AuditPackage { get; set; }
 }
