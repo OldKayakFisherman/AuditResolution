@@ -26,7 +26,7 @@ public class FormDataParserTests
         
         IOptions<AppSettings> options = new OptionsWrapper<AppSettings>(settings);
 
-        IList<DBKeyImportLog> logs = LocalDataHelper.GetDBKeyImportLogData();
+        IList<DBKeyImportLog> logs = LocalDataHelper.GetGeneral2022DBKeyImportLogData();
         ((List<DBKeyImportLog>)logs).ForEach (x => dbKeyImportLogRepository.AddImportLogRecord(x));
         
         FormDataParser parser = new FormDataParser(client, options, dbKeyImportLogRepository);

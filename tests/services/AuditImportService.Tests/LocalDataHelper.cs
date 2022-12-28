@@ -6,7 +6,7 @@ namespace AuditImportService.Tests;
 
 public static class LocalDataHelper
 {
-    public static IList<DBKeyImportLog> GetDBKeyImportLogData()
+    public static IList<DBKeyImportLog> GetGeneral2022DBKeyImportLogData()
     {
         List<DBKeyImportLog> retval = new List<DBKeyImportLog>();
         DBKeyImportLog log = new DBKeyImportLog();
@@ -20,4 +20,6 @@ public static class LocalDataHelper
 
         return retval;
     }
+    
+    
 }

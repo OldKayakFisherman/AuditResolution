@@ -13,7 +13,7 @@ public class DBKeyImportLogRepositoryTests
     [Test]
     public void TestDataFlow()
     {
-        IList<DBKeyImportLog> logs = LocalDataHelper.GetDBKeyImportLogData();
+        IList<DBKeyImportLog> logs = LocalDataHelper.GetGeneral2022DBKeyImportLogData();
 
         using (ApplicationDbContext ctx = LocalDBHelper.CreateDbContext())
         {
