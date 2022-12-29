@@ -23,7 +23,8 @@ public class CAPTextConverter
                 captext.Findingrefnums = importCapText.Findingrefnums;
                 captext.SeqNumber = importCapText.SeqNumber.ToDefaultShort();
                 captext.Text = importCapText.Text;
-
+                
+                capTexts.Add(captext);
             }
             
         }

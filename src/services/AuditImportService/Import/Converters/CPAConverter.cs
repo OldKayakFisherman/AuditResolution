@@ -12,6 +12,8 @@ public class CPAConverter
 
         if (importAuditPackage.Audit != null)
         {
+            cpa = new CPA();
+            
             cpa.City = importAuditPackage.Audit.CPACity;
             cpa.Contact = importAuditPackage.Audit.CPAContact;
             cpa.EIN = importAuditPackage.Audit.AuditorEIN;
