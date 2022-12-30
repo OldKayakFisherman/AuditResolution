@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace AuditResolution.Common.Extensions;
 
 public static class NumberExtensions
@@ -6,6 +8,11 @@ public static class NumberExtensions
     {
         int retval = 0;
         int parseOut = 0;
+
+        if (sourceValue != null && sourceValue.IndexOf(".", StringComparison.Ordinal) > 0)
+        {
+            sourceValue = sourceValue.Split(".")[0];
+        }
         
         if (int.TryParse(sourceValue, out parseOut))
         {

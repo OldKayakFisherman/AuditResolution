@@ -20,7 +20,7 @@ public class AwardConverter
             foreach (var importAward in auditPackage.Awards)
             {
                 Award award = new Award();
-
+                
                 award.Amount = importAward.Amount.ToMoney();
                 award.ARRA = importAward.ARRA.ConvertFromYNString();
                 award.AwardIdentification = importAward.AwardIdentification;
@@ -36,7 +36,7 @@ public class AwardConverter
                 award.FederalProgramName = importAward.FederalProgramName;
                 award.FindingRefNums = importAward.FindingRefNums;
                 award.Findings =
-                    new FindingConverter().Convert(auditPackage.Findings, importAward.ElecauditsId.ToDefaultInt());
+                    new FindingConverter().Convert(auditPackage.Findings, importAward.ElecauditsId);
                 award.LoanBalance = importAward.LoanBalance.ToMoney();
                 award.Loans = importAward.Loans.ConvertFromYNString();
                 award.MajorProgram = importAward.MajorProgram.ConvertFromYNString();

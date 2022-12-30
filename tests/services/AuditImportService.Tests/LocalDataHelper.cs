@@ -33,10 +33,28 @@ public static class LocalDataHelper
         
         retval.Add(new DBKeyImportLog(){DbKey = 64473, AuditYear = 2022, DateAdded = DateTime.Now});
         retval.Add(new DBKeyImportLog(){DbKey = 220301, AuditYear = 2022, DateAdded = DateTime.Now});
-        retval.Add(new DBKeyImportLog(){DbKey = 50271, AuditYear = 2022, DateAdded = DateTime.Now}); 
-        /* Research Why Data is not being returned *///retval.Add(new DBKeyImportLog(){DbKey = 150547, AuditYear = 2022, DateAdded = DateTime.Now});
+        retval.Add(new DBKeyImportLog() { DbKey = 50271, AuditYear = 2022, DateAdded = DateTime.Now });
         retval.Add(new DBKeyImportLog(){DbKey = 207055, AuditYear = 2022, DateAdded = DateTime.Now});
         
+
+        return retval;
+    }
+    public static IList<DBKeyImportLog> GetFindingDbKeyImportLogData()
+    {
+        List<DBKeyImportLog> retval = new List<DBKeyImportLog>();
+        DBKeyImportLog log = new DBKeyImportLog();
+
+        /*
+                  AuditYear = 2022
+                  DbKey 215447, 232329, 228595, 184042, 161114
+            
+           */    
+        
+        retval.Add(new DBKeyImportLog(){DbKey = 215447, AuditYear = 2022, DateAdded = DateTime.Now});
+        retval.Add(new DBKeyImportLog(){DbKey = 232329, AuditYear = 2022, DateAdded = DateTime.Now});
+        retval.Add(new DBKeyImportLog() { DbKey = 228595, AuditYear = 2022, DateAdded = DateTime.Now });
+        retval.Add(new DBKeyImportLog(){DbKey = 184042, AuditYear = 2022, DateAdded = DateTime.Now});
+        retval.Add(new DBKeyImportLog(){DbKey = 161114, AuditYear = 2022, DateAdded = DateTime.Now});
 
         return retval;
     }

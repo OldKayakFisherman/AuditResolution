@@ -6,15 +6,15 @@ namespace AuditImportService.Import.Converters;
 
 public class FindingConverter
 {
-    public IList<Finding>? Convert(IList<ImportAuditFinding>? importAuditFindings, int awardId)
+    public IList<Finding>? Convert(IList<ImportAuditFinding>? importAuditFindings, string awardId)
     {
         IList<Finding>? findings = null;
 
-        if (importAuditFindings != null && awardId > 0)
+        if (importAuditFindings != null && !string.IsNullOrEmpty(awardId))
         {
             IList<ImportAuditFinding>? filteredImportFindings =
                 importAuditFindings
-                    .Where(x => x.ElecAuditsId == awardId.ToString()).ToList();
+                    .Where(x => x.ElecAuditsId == awardId).ToList();
 
             if (filteredImportFindings.Count > 0)
             {
