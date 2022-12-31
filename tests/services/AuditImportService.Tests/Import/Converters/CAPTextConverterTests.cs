@@ -15,8 +15,10 @@ using TestHelpers;
 
 namespace AuditImportService.Tests.Import.Converters;
 
+[TestFixture]
 public class CAPTextConverterTests
 {
+
     [Test]
     public async Task TestConvert()
     {

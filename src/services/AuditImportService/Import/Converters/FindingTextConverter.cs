@@ -12,6 +12,8 @@ public class FindingTextConverter
 
         if (importAuditPackage.FindingsTexts != null && importAuditPackage.FindingsTexts.Any())
         {
+            findingTexts = new List<FindingText>();
+            
             foreach (var importFindingText in importAuditPackage.FindingsTexts)
             {
                 FindingText findingText = new FindingText();
@@ -20,6 +22,8 @@ public class FindingTextConverter
                 findingText.FindingRefNums = importFindingText.Findingrefnums;
                 findingText.SeqNumber = importFindingText.SeqNumber.ToDefaultShort();
                 findingText.Text = importFindingText.Text;
+                
+                findingTexts.Add(findingText);
             }
         }
         
